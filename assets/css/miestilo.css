@@ -83,3 +83,6 @@ h1 {
   transform: translate(-50%, -50%);
   font-size: 36px; /* You can adjust the size as needed */
 }
+html{
+  height: 100%;
+}
