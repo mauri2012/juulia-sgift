@@ -1,39 +1,79 @@
 
-*{ margin:0;
-    padding:0;
-    }
-.titulo{
-     background-color: #92a8d1;
-    margin: 20px;
+@keyframes aparecer {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
 }
-.parrafo{
-     background-color: green;
-    padding-top:50px;
-    padding-left: 10px;
-    padding-bottom: 60px;
-    padding-right: 300px;
-}
-footer{
-    background-color: GoldenRod;
-   padding: 10px 20px 30px 40px;
-   margin: 10px 200px;
-   
-} 
 
-/**/
-p{ 
-font-family: verdana;/*tipo de letras*/
-text-align: justify;/*alineación del texto*/
-color: red; /*color de la fuente*/
-font-size:24 px;/*tamaño de la fuente*/
-font-style: italic; /*estilo */
-font-weight: bold; /* negrito o fuerte*/
-}
 body {
-background-color: lightblue; /*color de fondo del body*/
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  color: white;
 }
-/* color y alineación de la etiqueta h1*/
-h1 { color: white;
-font-weight: bold;/* negrito o fuerte*/
-text-align: center;/*alineación*/
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px white);
+}
+
+header, section, footer {
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+header, footer {
+  background-color: #cc0000;
+}
+
+h1 {
+  color: #72d372;
+}
+
+#myText {
+  animation-name: aparecer;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  position: relative; /* Adjusted position */
+  z-index: 1; /* Ensure it's above snowflakes */
+}
+
+#contador {
+  font-size: 60px;
+  background-color: #ff0000;
+  color: #ffffff;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0; /* Adjusted z-index */
+}
+#musicalNote {
+  position: relative;
+  display: inline-block;
+  text-decoration: none; /* Initially, no strikethrough */
+  color: #ffffff; /* Set the color to match the background or your preference */
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+}
+
+#musicalNote::before {
+  content: '\266A'; /* Unicode for the musical note symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px; /* You can adjust the size as needed */
 }

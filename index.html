@@ -1,29 +1,46 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Gift</title>
-<style>
-@keyframes aparecer {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-#miTexto {
-  visibility: hidden;
-  animation: aparecer 2s linear 3s forwards;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Gift</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/miestilo.css">
 </head>
-<body>
+<body class="px-5">
+  <div id="snow" data-count="200"></div>
+  <header>
+   <!-- Play button to initiate audio playback -->
+   <span id="musicalNote"  onclick="toggleAudio()"></span>
+   
 
-<h1 id="miTexto">Hola Mundo!</h1>
+<!-- Audio element (without autoplay) -->
+<audio class="d-none" id="christmasAudio" controls loop>
+  <source src="descargas/we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3" type="audio/mp3">
+  Your browser does not support the audio tag.
+</audio>
+
+  </header>
+  <section class="p-5 bg-success row">
+    <div class="col-3"></div>
+    <article id="myText" class="p-5 col-7"> 
+      <h1 class="px-5">Moi Juulia!</h1> 
+      <h1 class="px-5">Hyvää Joulua! 🎄🎅</h1>
+    </article>
+  </section>
+  <footer class="bg-danger p-5 row">
+    <div class="row col-6">
+      
+      <h1 class="px-5 col-12">Days until Christmas:</h1>
+    </div>
+
+    <p id="contador" class="px-5 col-6"></p>
+  </footer>
+
+<script src="assets/js/pure-snow.js"></script>
+<script src="assets/js/contador.js"></script>
+<script src="assets/js/notamusical.js"></script>
 
 </body>
 </html>
-
-
-
-
 
